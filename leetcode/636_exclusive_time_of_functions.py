@@ -4,7 +4,8 @@ from typing import List
 class Solution:
     def exclusiveTime(self, n: int, logs: List[str]) -> List[int]:
         """
-        Given the number of functions and a list of logs, this function returns the exclusive time of each function.
+        Given the number of functions and a list of logs, 
+        this function returns the exclusive time of each function.
         """
         result = [0] * n
         stack = []
