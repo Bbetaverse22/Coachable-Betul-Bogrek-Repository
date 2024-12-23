@@ -2,6 +2,10 @@
 
 class Solution:
     def maximumSwap(self, num: int) -> int:
+        """
+        Given a non-negative integer, this function returns the maximum value
+        that can be obtained by swapping two digits of the integer at most once.
+        """
         num_list = list(str(num))
         last = {int(x): i for i, x in enumerate(num_list)}
 
