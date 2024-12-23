@@ -28,4 +28,3 @@ class Solution:
         else:
             dfs(x, y)
         return board
-

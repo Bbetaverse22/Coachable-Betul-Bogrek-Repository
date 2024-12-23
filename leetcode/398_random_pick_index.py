@@ -20,4 +20,3 @@ class Solution:
             index = random.randint(0, len(self.nums) - 1)
             if target == self.nums[index]:
                 return index
-
