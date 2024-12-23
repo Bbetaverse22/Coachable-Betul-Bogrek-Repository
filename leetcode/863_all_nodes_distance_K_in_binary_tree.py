@@ -1,6 +1,6 @@
 """863 All Nodes Distance K in Binary Tree"""
 from collections import defaultdict, deque
-from typing import List, Optional
+from typing import List
 
 class TreeNode:
     """
@@ -42,4 +42,3 @@ class Solution:
                         queue.append((neighbor, dist + 1))
 
         return result
-
