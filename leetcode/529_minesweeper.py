@@ -21,7 +21,6 @@ class Solution:
                     nx, ny = x + dx, y + dy
                     if 0 <= nx < len(board) and 0 <= ny < len(board[0]):
                         dfs(nx, ny)
-
         directions = [(-1, -1), (-1, 0), (-1, 1), (0, -1), (0, 1), (1, -1), (1, 0), (1, 1)]
         x, y = click
         if board[x][y] == 'M':
