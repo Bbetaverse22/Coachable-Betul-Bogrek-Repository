@@ -1,4 +1,4 @@
-"""590 Subarray Sum Equals K"""
+"""560 Subarray Sum Equals K"""
 from typing import List
 
 class Solution:
