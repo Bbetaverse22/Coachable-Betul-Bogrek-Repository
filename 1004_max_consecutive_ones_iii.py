@@ -13,8 +13,8 @@ class Solution:
         max_length = 0
         zero_count = 0
 
-        for right in range(len(nums)):
-            if nums[right] == 0:
+        for right, value in enumerate(nums):
+            if value == 0:
                 zero_count += 1
 
             while zero_count > k:
