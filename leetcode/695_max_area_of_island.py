@@ -26,9 +26,9 @@ class Solution:
 
             return area
 
-        for i in range(len(grid)):
-            for j in range(len(grid[0])):
-                if grid[i][j] == 1:
+        for i, row in enumerate(grid):
+            for j, cell in enumerate(row):
+                if cell == 1:
                     max_area = max(max_area, dfs(i, j))
 
         return max_area
