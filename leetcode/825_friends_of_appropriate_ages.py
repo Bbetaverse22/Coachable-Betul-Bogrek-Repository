@@ -22,9 +22,9 @@ class Solution:
             for age_b in range(1, 121):
                 if freq[age_b] == 0:
                     continue
-                if not (0.5 * age_a + 7 < age_b <= age_a):
+                if not 0.5 * age_a + 7 < age_b <= age_a:
                     continue
-                if age_b > 100 and age_a < 100:
+                if age_b > 100 > age_a:
                     continue
                 total_requests += freq[age_a] * (freq[age_b] - (age_a == age_b))
 
