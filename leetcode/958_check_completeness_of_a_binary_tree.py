@@ -1,11 +1,10 @@
 """958. Check Completeness of a Binary Tree"""
-from typing import Optional
 from collections import deque
 
 class Solution:
     """Solution Class"""
 
-    def is_complete_tree(self, root: Optional[TreeNode]) -> bool:
+    def is_complete_tree(self, root) -> bool:
         """
         This function checks if a binary tree is complete.
         """
