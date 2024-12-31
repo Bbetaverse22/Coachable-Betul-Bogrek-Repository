@@ -1,12 +1,12 @@
 """1209. Remove All Adjacent Duplicates in String II"""
-from typing import List
 
 class Solution:
     """Solution Class"""
 
     def remove_duplicates(self, s: str, k: int) -> str:
         """
-        This function removes all adjacent duplicates in a string where a duplicate is defined as a substring of length k.
+        This function removes all adjacent duplicates in a string
+        where a duplicate is defined as a substring of length k.
         """
         stack = []
 
