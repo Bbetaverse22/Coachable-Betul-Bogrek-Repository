@@ -1,17 +1,19 @@
 """19. Remove Nth Node From End of List"""
+
 from typing import Optional
 
 class ListNode:
-    def __init__(self, val=0, next=None):
+    def __init__(self, val=0, next_node=None):
         self.val = val
-        self.next = next
+        self.next = next_node
 
 class Solution:
     """Solution Class"""
 
     def remove_nth_from_end(self, head: Optional[ListNode], n: int) -> Optional[ListNode]:
         """
-        This function removes the nth node from the end of the list and returns the head of the modified list.
+        This function removes the n-th node from the end of the list
+        and returns the head of the modified list.
         """
         dummy = ListNode(0, head)
         fast = dummy
@@ -27,4 +29,3 @@ class Solution:
         slow.next = slow.next.next
 
         return dummy.next
-
