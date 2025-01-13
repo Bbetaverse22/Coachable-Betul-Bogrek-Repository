@@ -8,8 +8,6 @@ class Solution:
         """
         This function counts the number of friend requests made based on age constraints.
         """
-        ages.sort()
-
         freq = [0] * 121
         for age in ages:
             freq[age] += 1
@@ -19,12 +17,10 @@ class Solution:
         for age_a in range(1, 121):
             if freq[age_a] == 0:
                 continue
-            for age_b in range(1, 121):
+            left = age_a // 2 + 8
+            right = age_a + 1
+            for age_b in range(left, right):
                 if freq[age_b] == 0:
-                    continue
-                if not 0.5 * age_a + 7 < age_b <= age_a:
-                    continue
-                if age_b > 100 > age_a:
                     continue
                 total_requests += freq[age_a] * (freq[age_b] - (age_a == age_b))
 
