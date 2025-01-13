@@ -13,9 +13,9 @@ def countSubstrings(s: str) -> int:
             count += 1
             left -= 1
             right += 1
-    
+
     for i in range(n):
         expandAroundCenter(i, i)
         expandAroundCenter(i, i + 1)
-    
+
     return count

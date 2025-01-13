@@ -1,9 +1,9 @@
 """236 Lowest Common Ancestor of a Binary Tree"""
 class TreeNode:
-    def __init__(self, val=0, left=None, right=None):
-        self.val = val
-        self.left = left
-        self.right = right
+    def __init__(self, val_1=0, left_1=None, right_1=None):
+        self.val = val_1
+        self.left = left_1
+        self.right = right_1
 
 class Solution:
     def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
