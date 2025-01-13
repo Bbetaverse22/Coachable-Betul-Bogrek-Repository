@@ -1,30 +1,37 @@
 """380. Insert Delete GetRandom O(1)"""
+
 import random
 
 class RandomizedSet:
     """RandomizedSet Class"""
 
     def __init__(self):
-        self.hashMap = {}
-        self.valuesList = []
-        
+        """Initializes the data structure."""
+        self.dict = {}
+        self.list = []
+
     def insert(self, val: int) -> bool:
-        if val in self.hashMap:
+        """Inserts a value to the set. Returns true if the set did not
+        already contain the specified element."""
+        if val in self.dict:
             return False
-        self.valuesList.append(val)
-        self.hashMap[val] = len(self.valuesList) - 1
+        self.dict[val] = len(self.list)
+        self.list.append(val)
         return True
 
     def remove(self, val: int) -> bool:
-        if val not in self.hashMap:
+        """Removes a value from the set. Returns true if the set contained
+        the specified element."""
+        if val not in self.dict:
             return False
-        idx = self.hashMap[val]
-        last = self.valuesList[-1]
-        self.valuesList[idx] = last
-        self.hashMap[last] = idx
-        self.valuesList.pop()
-        del self.hashMap[val]
+        last_element = self.list[-1]
+        idx = self.dict[val]
+        self.list[idx] = last_element
+        self.dict[last_element] = idx
+        self.list.pop()
+        del self.dict[val]
         return True
-        
-    def getRandom(self) -> int:
-        return random.choice(self.valuesList)
+
+    def get_random(self) -> int:
+        """Get a random element from the set."""
+        return random.choice(self.list)
