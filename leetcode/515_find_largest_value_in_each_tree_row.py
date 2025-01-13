@@ -4,10 +4,10 @@ from collections import deque
 
 # Definition for a binary tree node.
 class TreeNode1:
-    def __init__(self, val=0, left=None, right=None):
-        self.val1 = val
-        self.left1 = left
-        self.right1 = right
+    def __init__(self, val1=0, left1=None, right1=None):
+        self.val1 = val1
+        self.left1 = left1
+        self.right1 = right1
 
 class Solution:
     """Solution Class"""
