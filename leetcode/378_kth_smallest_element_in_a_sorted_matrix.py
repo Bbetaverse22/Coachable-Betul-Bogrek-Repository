@@ -15,7 +15,7 @@ class Solution:
         heapq.heapify(min_heap)
 
         for _ in range(k - 1):
-            item, row, column = heapq.heappop(min_heap)
+            _, row, column = heapq.heappop(min_heap)
             if column + 1 < n:
                 heapq.heappush(min_heap, (matrix[row][column + 1], row, column + 1))
 
