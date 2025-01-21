@@ -6,7 +6,8 @@ class TreeNode3:
         self.right3 = right3
 
 class Solution:
-    def lowestCommonAncestor(self, root: 'TreeNode3', p: 'TreeNode3', q: 'TreeNode3') -> 'TreeNode3':
+    def lowestCommonAncestor(self, root: 'TreeNode3',
+    p: 'TreeNode3', q: 'TreeNode3') -> 'TreeNode3':
         """Find the lowest common ancestor of two nodes in a binary tree."""
         if not root or root == p or root == q:
             return root
