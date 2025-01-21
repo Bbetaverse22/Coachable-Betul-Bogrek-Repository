@@ -26,17 +26,17 @@ class Solution:
                 return None
             mid = len(nums) // 2
             root = TreeNode(nums[mid])
-            root.left = self.create_subtree(nums[:mid])
-            root.right = self.create_subtree(nums[mid+1:])
+            root.left = create_subtree(nums[:mid])
+            root.right = create_subtree(nums[mid+1:])
             return root
 
-        def create_subtree(self, nums: List[int]) -> Optional[TreeNode]:
+        def create_subtree(nums: List[int]) -> Optional[TreeNode]:
             if not nums:
                 return None
             mid = len(nums) // 2
             node = TreeNode(nums[mid])
-            node.left = self.create_subtree(nums[:mid])
-            node.right = self.create_subtree(nums[mid+1:])
+            node.left = create_subtree(nums[:mid])
+            node.right = create_subtree(nums[mid+1:])
             return node
 
         sorted_values = inorder_traversal(root)
