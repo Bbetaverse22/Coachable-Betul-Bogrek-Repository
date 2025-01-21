@@ -1,6 +1,6 @@
 """865. Smallest Subtree with all the Deepest Nodes"""
 
-from typing import Optional, Tuple
+from typing import Tuple
 
 # Definition for a binary tree node.
 class TreeNode2:
