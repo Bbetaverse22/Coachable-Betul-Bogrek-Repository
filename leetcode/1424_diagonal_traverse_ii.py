@@ -11,9 +11,9 @@ class Solution:
         This function returns the diagonal order traversal of a 2D list.
         """
         diagonals = defaultdict(list)
-        for i in range(len(nums)):
-            for j in range(len(nums[i])):
-                diagonals[i + j].append(nums[i][j])
+        for i, row in enumerate(nums):
+            for j, value in enumerate(row):
+                diagonals[i + j].append(value)
 
         result = []
         for k in sorted(diagonals.keys()):
