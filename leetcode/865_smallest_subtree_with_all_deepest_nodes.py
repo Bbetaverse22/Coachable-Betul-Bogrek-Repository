@@ -4,10 +4,10 @@ from typing import Optional, Tuple
 
 # Definition for a binary tree node.
 class TreeNode:
-    def __init__(self, val=0, left=None, right=None):
-        self.val = val
-        self.left = left
-        self.right = right
+    def __init__(self, val2=0, left2=None, right2=None):
+        self.val2 = val2
+        self.left2 = left2
+        self.right2 = right2
 
 class Solution:
     """Solution Class"""
