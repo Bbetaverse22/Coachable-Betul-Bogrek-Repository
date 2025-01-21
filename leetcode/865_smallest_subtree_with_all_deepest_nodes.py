@@ -26,7 +26,6 @@ class Solution:
                 return left_depth + 1, left_subtree
             if right_depth > left_depth:
                 return right_depth + 1, right_subtree
-            else:
-                return left_depth + 1, node
+            return left_depth + 1, node
 
         return dfs(root)[1]
