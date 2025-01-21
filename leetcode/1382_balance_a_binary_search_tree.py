@@ -19,15 +19,15 @@ class Solution:
         def inorder_traversal(node: Optional[TreeNode5]) -> List[int]:
             if not node:
                 return []
-            return inorder_traversal(node.left) + [node.val] + inorder_traversal(node.right)
+            return inorder_traversal(node.left5) + [node.val5] + inorder_traversal(node.right5)
 
         def sorted_array_to_bst(nums: List[int]) -> Optional[TreeNode5]:
             if not nums:
                 return None
             mid = len(nums) // 2
             root = TreeNode5(nums[mid])
-            root.left = create_subtree(nums[:mid])
-            root.right = create_subtree(nums[mid+1:])
+            root.left5 = create_subtree(nums[:mid])
+            root.right5 = create_subtree(nums[mid+1:])
             return root
 
         def create_subtree(nums: List[int]) -> Optional[TreeNode5]:
@@ -35,8 +35,8 @@ class Solution:
                 return None
             mid = len(nums) // 2
             node = TreeNode5(nums[mid])
-            node.left = create_subtree(nums[:mid])
-            node.right = create_subtree(nums[mid+1:])
+            node.left5 = create_subtree(nums[:mid])
+            node.right5 = create_subtree(nums[mid+1:])
             return node
 
         sorted_values = inorder_traversal(root)
