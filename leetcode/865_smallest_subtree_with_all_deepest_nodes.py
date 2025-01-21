@@ -3,7 +3,7 @@
 from typing import Optional, Tuple
 
 # Definition for a binary tree node.
-class TreeNode:
+class TreeNode2:
     def __init__(self, val2=0, left2=None, right2=None):
         self.val2 = val2
         self.left2 = left2
@@ -12,11 +12,11 @@ class TreeNode:
 class Solution:
     """Solution Class"""
 
-    def subtreeWithAllDeepest(self, root: TreeNode) -> TreeNode:
+    def subtreeWithAllDeepest(self, root: TreeNode2) -> TreeNode2:
         """
         This function finds the smallest subtree containing all the deepest nodes.
         """        
-        def dfs(node: TreeNode) -> Tuple[int, TreeNode]:
+        def dfs(node: TreeNode2) -> Tuple[int, TreeNode2]:
             if not node:
                 return 0, None
             left_depth, left_subtree = dfs(node.left)
