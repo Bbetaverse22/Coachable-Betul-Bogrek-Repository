@@ -28,11 +28,11 @@ class Solution:
             for _ in range(n + 1):
                 if max_heap:
                     temp.append(heapq.heappop(max_heap))
-            
+
             for count in temp:
                 if count + 1 < 0:
                     heapq.heappush(max_heap, count + 1)
-            
+
             time += n + 1 if max_heap else len(temp)
-        
+
         return time
