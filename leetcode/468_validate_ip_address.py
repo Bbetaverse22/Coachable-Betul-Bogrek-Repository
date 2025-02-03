@@ -10,7 +10,8 @@ class Solution:
             if len(parts) != 4:
                 return False
             for part in parts:
-                if not part.isdigit() or not 0 <= int(part) <= 255 or (part[0] == '0' and len(part) > 1):
+                if not part.isdigit() or not 0 <= int(part) <= 255 or (
+                    part[0] == '0' and len(part) > 1):
                     return False
             return True
 
@@ -19,13 +20,13 @@ class Solution:
             if len(parts) != 8:
                 return False
             for part in parts:
-                if not (1 <= len(part) <= 4) or not all(c in "0123456789abcdefABCDEF" for c in part):
+                if not (1 <= len(part) <= 4) or not all(
+                    c in "0123456789abcdefABCDEF" for c in part):
                     return False
             return True
 
         if is_ipv4(query_ip):
             return "IPv4"
-        elif is_ipv6(query_ip):
+        if is_ipv6(query_ip):
             return "IPv6"
-        else:
-            return "Neither"
+        return "Neither"
