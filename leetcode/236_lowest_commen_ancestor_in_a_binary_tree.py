@@ -1,12 +1,13 @@
 """236 Lowest Common Ancestor of a Binary Tree"""
-class TreeNode:
-    def __init__(self, val=0, left=None, right=None):
-        self.val = val
-        self.left = left
-        self.right = right
+class TreeNode3:
+    def __init__(self, val3=0, left3=None, right3=None):
+        self.val3 = val3
+        self.left3 = left3
+        self.right3 = right3
 
 class Solution:
-    def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
+    def lowestCommonAncestor(self, root: 'TreeNode3',
+    p: 'TreeNode3', q: 'TreeNode3') -> 'TreeNode3':
         """Find the lowest common ancestor of two nodes in a binary tree."""
         if not root or root == p or root == q:
             return root
