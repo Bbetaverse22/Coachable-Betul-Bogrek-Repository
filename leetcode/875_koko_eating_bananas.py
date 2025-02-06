@@ -1,4 +1,5 @@
 from typing import List
+import math
 
 class Solution:
     """Solution Class"""
@@ -11,7 +12,7 @@ class Solution:
         def canFinish(piles, k, h):
             hours = 0
             for pile in piles:
-                hours += (pile + k - 1) // k
+                hours += math.ceil(pile / k)
             return hours <= h
 
         left, right = 1, max(piles)

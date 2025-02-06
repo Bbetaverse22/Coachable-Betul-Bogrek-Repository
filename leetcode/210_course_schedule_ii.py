@@ -15,7 +15,7 @@ class Solution:
             graph[src].append(dest)
             in_degree[dest] += 1
 
-        queue = deque([i for i in range(num_courses) if in_degree[i] == 0])
+        queue = deque(i for i in range(num_courses) if in_degree[i] == 0)
         order = []
 
         while queue:
