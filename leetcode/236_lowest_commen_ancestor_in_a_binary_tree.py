@@ -1,5 +1,4 @@
 """236 Lowest Common Ancestor of a Binary Tree"""
-
 class TreeNode4:
     def __init__(self, val4=0, left4=None, right4=None):
         self.val = val4
