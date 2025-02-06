@@ -15,7 +15,8 @@ class Solution:
         This function removes the n-th node from the end of the list
         and returns the head of the modified list.
         """
-        dummy = ListNode(0, head)
+        dummy = ListNode(0)
+        dummy.next = head
         fast = dummy
         slow = dummy
 

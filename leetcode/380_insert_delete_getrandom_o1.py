@@ -7,31 +7,31 @@ class RandomizedSet:
 
     def __init__(self):
         """Initializes the data structure."""
-        self.dict = {}
-        self.list = []
+        self.map = {}
+        self.array = []
 
     def insert(self, val: int) -> bool:
         """Inserts a value to the set. Returns true if the set did not
         already contain the specified element."""
-        if val in self.dict:
+        if val in self.map:
             return False
-        self.dict[val] = len(self.list)
-        self.list.append(val)
+        self.map[val] = len(self.array)
+        self.array.append(val)
         return True
 
     def remove(self, val: int) -> bool:
         """Removes a value from the set. Returns true if the set contained
         the specified element."""
-        if val not in self.dict:
+        if val not in self.map:
             return False
-        last_element = self.list[-1]
-        idx = self.dict[val]
-        self.list[idx] = last_element
-        self.dict[last_element] = idx
-        self.list.pop()
-        del self.dict[val]
+        last_element = self.array[-1]
+        idx = self.map[val]
+        self.array[idx] = last_element
+        self.map[last_element] = idx
+        self.array.pop()
+        del self.map[val]
         return True
 
     def get_random(self) -> int:
         """Get a random element from the set."""
-        return random.choice(self.list)
+        return random.choice(self.array)

@@ -16,14 +16,16 @@ class Solution:
             "6": "mno", "7": "pqrs", "8": "tuv", "9": "wxyz"
         }
 
-        def backtrack(index: int, path: str):
+        def backtrack(index: int, path: List[str]):
             if index == len(digits):
-                combinations.append(path)
+                combinations.append(''.join(path))
                 return
             possible_letters = phone_map[digits[index]]
             for letter in possible_letters:
-                backtrack(index + 1, path + letter)
+                path.append(letter)
+                backtrack(index + 1, path)
+                path.pop()
 
         combinations = []
-        backtrack(0, "")
+        backtrack(0, [])
         return combinations
