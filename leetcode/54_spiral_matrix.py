@@ -8,7 +8,7 @@ class Solution:
         Returns the elements of the matrix in spiral order.
         """
         result = []
-        if not matrix: 
+        if not matrix:
             return result
 
         top, bottom, left, right = 0, len(matrix)-1, 0, len(matrix[0])-1
