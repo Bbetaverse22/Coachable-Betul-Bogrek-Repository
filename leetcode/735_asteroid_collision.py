@@ -13,7 +13,7 @@ class Solution:
                 if stack[-1] < -ast:
                     stack.pop()
                     continue
-                elif stack[-1] == -ast:
+                if stack[-1] == -ast:
                     stack.pop()
                 break
             else:

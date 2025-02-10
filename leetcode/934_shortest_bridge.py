@@ -9,7 +9,6 @@ class Solution:
         Finds the shortest distance to connect two islands in the grid.
         """
         n = len(grid)
-        directions = [(1,0),(-1,0),(0,1),(0,-1)]
         visited = [[False]*n for _ in range(n)]
 
         def dfs(x, y, queue):
@@ -18,27 +17,25 @@ class Solution:
             while stack:
                 i, j = stack.pop()
                 queue.append((i, j, 0))
-                for dx, dy in directions:
+                for dx, dy in [(1,0), (-1,0), (0,1), (0,-1)]:
                     nx, ny = i + dx, j + dy
                     if 0 <= nx < n and 0 <= ny < n and not visited[nx][ny] and grid[nx][ny] == 1:
                         visited[nx][ny] = True
                         stack.append((nx, ny))
 
-        # Find first island
-        queue = deque()
-        found = False
-        for i in range(n):
-            if found: break
-            for j in range(n):
-                if grid[i][j] == 1:
-                    dfs(i, j, queue)
-                    found = True
-                    break
+        def find_first_island():
+            queue = deque()
+            for i in range(n):
+                for j in range(n):
+                    if grid[i][j] == 1:
+                        dfs(i, j, queue)
+                        return queue
+            return None
 
-        # BFS from the boundary of first island to find second island
+        queue = find_first_island()
         while queue:
             x, y, dist = queue.popleft()
-            for dx, dy in directions:
+            for dx, dy in [(1,0), (-1,0), (0,1), (0,-1)]:
                 nx, ny = x + dx, y + dy
                 if 0 <= nx < n and 0 <= ny < n and not visited[nx][ny]:
                     if grid[nx][ny] == 1:
